@@ -10,23 +10,31 @@ sys.setrecursionlimit(10000)
 
 
 def mat_add(a, b):
-    pass
+    for i in range(len(a)):
+        for j in range(len(a[0])):
+            a[i][j] += b[i][j]
 
 
 def mat_sub(a, b):
-    pass
+    for i in range(len(a)):
+        for j in range(len(a[0])):
+            a[i][j] -= b[i][j]
 
 
 def mat_mul(a, b):
-    pass
+    for i in range(len(a)):
+        for j in range(len(a[0])):
+            a[i][j] *= b[i][j]
 
 
 def mat_div(a, b):
-    pass
+    for i in range(len(a)):
+        for j in range(len(a[0])):
+            a[i][j] /= b[i][j]
 
 
 def transpose(a):
-    pass
+    return [[a[j][i] for j in range(len(a))] for i in range(len(a[0]))]
 
 
 operations = {

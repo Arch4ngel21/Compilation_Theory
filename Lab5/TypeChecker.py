@@ -291,7 +291,6 @@ class TypeChecker(NodeVisitor):
                 self.symbol_table.vector_dims[node.var_id.name] = node.value.dims
                 self.symbol_table.vector_type[node.var_id.name] = node.value.vector_type
         else:
-            # TODO - Dimensions of matrices
             var_type = self.symbol_table.get(node.var_id.name)
 
             if var_type == 'vector' and value_type == 'vector':
